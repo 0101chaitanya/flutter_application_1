@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'package:flutter_application_1/views/login_view.dart';
 import 'package:flutter_application_1/views/register_view.dart';
+import 'package:flutter_application_1/views/verify_email_view.dart';
 
 Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,15 +40,18 @@ class _HomePageState extends State<HomePage> {
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.done:
-              // final user = FirebaseAuth.instance.currentUser;
-              // print(user?.emailVerified);
-              // var emailVerified2 = user?.emailVerified ?? false;
-              // if (emailVerified2) {
-              //   return const Text("Done");
-              // } else {
-              //   return const VerifyEmailView();
-              // }
-              return const LoginView();
+              final user = FirebaseAuth.instance.currentUser;
+              if (user != null) {
+                if (user.emailVerified) {
+                  const Text("email is verified");
+                } else {
+                  return const VerifyEmailView();
+                }
+              } else {
+                return LoginView();
+              }
+
+              return const Text("Done");
             default:
               {}
               return const CircularProgressIndicator();
@@ -55,4 +59,3 @@ class _HomePageState extends State<HomePage> {
         });
   }
 }
-
