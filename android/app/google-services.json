@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "462462033580",
+    "project_id": "duckingninja",
+    "storage_bucket": "duckingninja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462462033580:android:9af2d60a68e72df95c4909",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462462033580-rvvmp7gkg26a182u7avmjv62qa41rs6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4IV1KFFkEhk9cF5qksOKZIJGiinouOkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462462033580-rvvmp7gkg26a182u7avmjv62qa41rs6k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462462033580-1qe1klvk8eepni2kqqi46rtm4n1pmgrv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
